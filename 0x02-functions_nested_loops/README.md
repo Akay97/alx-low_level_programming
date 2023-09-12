@@ -1,1 +1,1 @@
-This is my alx Functions,and  nested lop project.
+This is my alx functions, pointers and loop project

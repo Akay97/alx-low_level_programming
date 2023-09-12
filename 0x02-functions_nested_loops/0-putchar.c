@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - the function of the code
+ * main - the defined function
  *
- * Return: (0) is success
+ * Return: (0) signifies success
  */
 int main(void)
 {
@@ -16,5 +16,6 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+
 	return (0);
 }
