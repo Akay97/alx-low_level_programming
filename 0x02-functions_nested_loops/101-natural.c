@@ -7,18 +7,16 @@
  */
 int main(void)
 {
-int a, b, c;
+int a;
+int b = 0;
 
-	for (a = 0; a <= 1024; a += 3)
+	for (a = 0; a <= 1024; a++)
 	{
-		printf("%d", a);
+		if ((a % 3 == 0) || (a % 5 == 0))
+		{
+			b += a;
+		}
 	}
-	for (b = 0; b <= 1024; b += 5)
-	{
-		printf("%d", b);
-	}
-
-	c = a + b;
-	printf("%d\n", c);
+	printf("%d\n", b);
 	return (0);
 }
