@@ -15,7 +15,7 @@ void more_numbers(void)
 	{
 		for (b = 0; b <= 14; b++)
 		{
-			putchar('0' + b);
+			printf("%d", b);
 		}
 		putchar('\n');
 	}
