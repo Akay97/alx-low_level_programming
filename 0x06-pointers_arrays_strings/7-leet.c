@@ -8,26 +8,26 @@
 
 char *leet(char *str)
 {
-	char c;
-	char *g = str;
+char *p = str;
+char led[] = "AEOTL";
+char rep[] = "43071";
 
-	while (*str)
-	{
-		c = *str;
-		if ((c == 'a' || c == 'A') ||
-		(c == 'e' || c == 'E') ||
-		(c == 'o' || c == 'O') ||
-		(c == 't' || c == 'T') ||
-		(c == 'l' || c == 'L'))
-		{
-		*str = (c == 'a' || c == 'A') ? '4' :
-		(c == 'e' || c == 'E') ? '3' :
-		(c == 'o' || c == 'O') ? '0' :
-		(c == 't' || c == 'T') ? '7' :
-		((c == 'l' || c == 'L') ? '1' : ' ');
-		}
-			str++;
-	}
+while (*str)
+{
+int i = 0;
 
-	return (g);
+while (led[i])
+{
+if (*str == led[i] || *str == led[i] + 32)
+{
+*str = rep[i];
+break;
 }
+i++;
+}
+str++;
+}
+
+return (p);
+}
+
