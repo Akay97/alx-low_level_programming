@@ -3,7 +3,6 @@
 
 /**
  * _sqrt_recursion_sq - the function name
- * _sqrt_recursion - the function name
  * @a: the first integer
  * @b: the second integer
  * @n: the number which square root will be returned
@@ -25,6 +24,12 @@ int _sqrt_recursion_sq(int n, int a, int b)
 		return (_sqrt_recursion_sq(n, a + 1, b));
 	}
 }
+
+/**
+ * _sqrt_recursion - the function name
+ * @n: the number which square root will be returned
+ * Return: 0 always success
+ */
 
 int _sqrt_recursion(int n)
 {
