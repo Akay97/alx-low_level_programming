@@ -3,54 +3,45 @@
 #include <stdlib.h>
 
 /**
- * argstostr - the function name
- * @ac: the argument counter
- * @av: the argument variable
- * Return: 0 as success
+ * argstostr - Concatenate all arguments into a single string.
+ * @ac: Argument count.
+ * @av: Array of argument strings.
+ * Return: Pointer to concatenated string (or NULL on failure).
  */
 
 char *argstostr(int ac, char **av)
 {
-	int a;
-	int b;
-	int cp;
-	char *arg;
-	char *con;
+	int total_length = 0;
+	int i, j, k = 0;
+	char *result;
 
 	if (ac == 0 || av == NULL)
-	{
-		return (NULL);
-	}
-	a = 0;
-	for (b = 0; b < ac; b++)
-	{
-		arg = av[b];
-		while (*arg != '\0')
-		{
-			a++;
-			arg++;
-		}
-	a++;
-	}
-	con = (char *)malloc((a + 1) * sizeof(char));
+	return (NULL);
 
-	if (con != NULL)
+	for (i = 0; i < ac; i++)
 	{
-		cp = 0; 
-		for (b = 0; b < ac; b++)
+		for (j = 0; av[i][j]; j++)
 		{
-			arg = av[b];
-				while (*arg != '\0')
-				{
-					con[cp] = *arg;
-					cp++;
-					arg++;
-				}
-			con[cp] = '\n';
-			cp++;
+		total_length++;
+		total_length++;
 		}
-		con[cp] = '\0';
 	}
-	return (con);
+
+	result = (char *)malloc(total_length + 1);
+
+	if (result != NULL)
+	{
+		for (i = 0; i < ac; i++)
+		{
+			for (j = 0; av[i][j]; j++)
+			{
+				result[k++] = av[i][j];
+
+			}
+			result[k++] = '\n';
+		}
+		result[k] = '\0';
+	}
+
+	return (result);
 }
-
