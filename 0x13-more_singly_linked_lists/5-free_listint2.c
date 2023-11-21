@@ -3,7 +3,6 @@
 
 /**
  * free_listint2 - a function that free a listint_t list
- *
  * @head: the first element
  */
 
