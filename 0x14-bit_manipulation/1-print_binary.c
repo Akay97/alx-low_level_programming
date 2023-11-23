@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * print_binary - a function that print a binary
+ * @n: the integer
+ */
+
 void print_binary(unsigned long int n)
 {
 	int shift, bt, flag;
